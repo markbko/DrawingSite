@@ -1,0 +1,45 @@
+.container{
+    width: 20%;
+    margin: auto;
+    margin-top: 150px;
+    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    background: inherit;
+    overflow: hidden;
+    padding: 20px;
+}
+
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #0d6b8d, #096a53);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+img{
+    width: 45vw;
+    height: 90%;
+    z-index: 20;
+}
+img:not(:last-child):after {
+    content: '';
+    height: 1px;
+    background: black;
+    width: 50px;
+    position: absolute;
+    right: -50px;
+    top: 50%;
+  }
+img:not(:last-child):before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    border-style: solid;
+    border-width: 7px 0 7px 20px;
+    border-color: transparent transparent transparent black;
+    right: -50px;
+    transform: translateY(-50%);
+  }
